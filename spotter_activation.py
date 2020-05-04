@@ -21,7 +21,7 @@ if location is not None:
 #print(location_text)
 
 #Looks for Spotter activation is expected and returns that line
-activation_match = r'(?i)(\W|^)(spotter\sactivation\sis\sexpected)(\W|$)*([^\n\r]*)'
+activation_match = r'(?i)(\W|^)(spotter\sactivation\sis\sexpected|limited\sspotter\sactivation)(\W|$)*([^\n\r]*)'
 activation_check = re.search(activation_match, location_text)
 if activation_check is not None:
 	print(activation_check.group(0))
