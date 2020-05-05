@@ -17,6 +17,7 @@ Install the spotter activation script
 change the URL to match your county/region website. 
 
 Setup a cronjob to execute the script every x hours 
-"0 0/6 * * * python3 /home/pi/spotter_activation.py &"
+
+"0 0/6 * * * python3 /home/pi/spotter_activation.py >> /home/pi/log.txt 2>&1"
 
 All is complete 
