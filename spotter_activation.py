@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 #Program to check if spotter activation is expected for Fort Worth
-import requests, re
+import requests, re, datetime
 from bs4 import BeautifulSoup
 from notify_run import Notify
 notify = Notify()
@@ -24,5 +24,7 @@ if location is not None:
 activation_match = r'(?i)(\W|^)(spotter\sactivation\sis\sexpected|limited\sspotter\sactivation)(\W|$)*([^\n\r]*)'
 activation_check = re.search(activation_match, location_text)
 if activation_check is not None:
-	print(activation_check.group(0))
+	print(datetime.datetime.now(),activation_check.group(0))
 	notify.send(activation_check.group(0), url)
+else:
+	print("Spotter activation not expected at this time")
