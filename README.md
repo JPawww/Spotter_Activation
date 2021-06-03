@@ -17,6 +17,8 @@ Scan the QR code with the Notification Device and set notifications to "Allow"
 Install the spotter activation script
 change the URL to match your county/region website. 
 
+Need to make the script Executable with chmod +x 
+
 Setup a cronjob to execute the script every x hours 
 
 "0 0/6 * * * python3 /home/pi/spotter_activation.py >> /home/pi/log.txt 2>&1"
