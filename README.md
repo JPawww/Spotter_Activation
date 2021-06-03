@@ -5,8 +5,9 @@ It checks the NWS Hazardous weather Statement for the phrase "Spotter Activation
   
 Installation Instructions:
 Pre-requisite installs:
-BeautifulSoup4
 Python3
+And Python3 installs:
+BeautifulSoup4
 notify_run
 regex
 
